@@ -4,7 +4,7 @@ import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.speech.tts.TextToSpeech
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
 
@@ -30,6 +30,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == TTS_ENGINE_RESULT_CODE) { // Check if the result code is the same as the one sent by the TTS check intent.
             if (resultCode == TextToSpeech.Engine.CHECK_VOICE_DATA_PASS) { // If the device has all the necessary TTS data.
                 textToSpeech = TextToSpeech(this, TextToSpeech.OnInitListener {
