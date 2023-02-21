@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Text-To-Speech Demo</string>
+    <string name="type_your_text">Type Your Text</string>
+    <string name="listen">Listen</string>
+</resources>
